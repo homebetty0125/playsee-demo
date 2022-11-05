@@ -1,0 +1,128 @@
+// media query variables
+$sty_wideDesktopMedia : 1200;
+$sty_desktopMedia : 960;
+$sty_padMedia : 768;
+$sty_phoneMedia : 480;
+
+// media query for Landing page
+$sty_wideDesktopMedia_for_landing_page : 1280;
+$sty_desktopMedia_for_landing_page : 1024;
+$sty_padMedia_for_landing_page : 480;
+
+// container variables
+$sty_containerWidth : 1160;
+$sty_containerMinWidth : 320;
+
+// fixed variables
+$sty_fixedTop : 64;
+$sty_fixedTopMobile : 64;
+
+// color library
+$sty_colorWhite : "#FFFFFF";
+$sty_colorGrey300 : "#dbdbdb";
+$sty_colorGrey400 : "#c3c3c3";
+$sty_colorGrey500 : "#9b9b9b";
+$sty_colorGrey600 : "#757575";
+$sty_colorGrey700 : "#616161";
+$sty_colorGrey800 : "#4a4a4a";
+$sty_colorGrey900 : "#212121";
+$sty_colorBlack : "#000000";
+
+// mask variables
+$sty_maskLight : "rgba(sty_colorWhite, 0.2)";
+$sty_maskDark : "rgba(sty_colorBlack, 0.2)";
+
+// profile variables
+$sty_profileContainerWidth : 600;
+
+// videoList variables
+$sty_videoContainerWidth : 600;
+$sty_videoListRatio : 1.5;
+
+$sty_fontStack : "'Ageo', 'Helvetica Neue', Helvetica, Arial, 'sans-serif'";
+
+// landing page variables
+$sty_landingPageFooterBackground : "rgba(49, 65, 70, 0.4)";
+$sty_landingPageAppVideoBackground : "#DDDDDD";
+
+// terms variables
+$sty_footerIconFill : "#c3d5dc";
+$sty_footerLinkTextLight : "#c3d5dc";
+$sty_footerLinkTextDark : "#314146";
+$sty_footerBorderColor : "#f2f4f5";
+$sty_footerTermsColor : "rgba(40,70,80,0.6);";
+$sty_footerLanguageSelectorFrame : "rgba(40, 70, 80, 0.3)";
+
+// reset page variables
+$sty_resetPageMaskBg : "rgba(0, 5, 5, 0.4)";
+$sty_resetPageLineColor : "#f2f4f5";
+$sty_resetPageFrameColor : "#c3d5dc";
+$sty_resetPageFocusColor : "#32a0a6";
+
+// button status variables
+$sty_buttonHoverColor : "#ff664d";
+$sty_buttonActiveColor : "#ff5039";
+$sty_buttonDisableColor : "#f2f4f5";
+
+// from design
+// BackgroundColor
+$sty_backgroundLightB1 : "#F2F4F5"; //Background/Light/B1
+$sty_backgroundLight1st : "#FFFFFF"; //Background/Light/1st
+$sty_backgroundLight2nd : "#F2F4F5"; //Background/Light/2nd
+$sty_backgroundStillB1 : "#0C1212"; //Background/Still/B1
+$sty_backgroundStill1st : "#202525"; //Background/Still/1st
+$sty_backgroundStill2nd : "#353A3A"; //Background/Still/2nd
+$sty_elevatedLightB1 : "#F2F4F5"; //Background-Elevated/Light/B1
+$sty_elevatedLight1st : "#FFFFFF"; //Background-Elevated/Light/1st
+$sty_elevatedLight2nd : "#F2F4F5"; //Background-Elevated/Light/2nd
+$sty_elevatedStillB1 : "#202525"; //Background-Elevated/Still/B1
+$sty_elevatedStill1st : "#353A3A"; //Background-Elevated/Still/1st
+$sty_elevatedStill2nd : "#404545"; //Background-Elevated/Still/2nd
+$sty_floatingLight : "#FFFFFF"; //Floating/Light
+$sty_floatingStill : "#454A4A"; //Floating/Still
+$sty_glassSpecialTips : "rgba(195, 213, 220, 0.6)"; //Glass/Special/Tips
+$sty_glassSpecialSeparators : "rgba(180, 194, 200, 0.2)"; //Glass/Special/Separators
+$sty_glassSpecialOptions : "rgba(180, 194, 200, 0.15)"; //Glass/Special/Options
+$sty_glassIos20BlurLight : "rgba(247, 249, 250, 0.75)"; //Glass/ios_20blur/Light
+$sty_glassIos20BlurStill : "rgba(69, 74, 74, 0.7)"; //Glass/ios_20blur/Still
+$sty_glassAndroidLight : "rgba(255, 255, 255, 0.95)"; //Glass/Android/Light
+$sty_glassAndroidStill : "rgba(69, 74, 74, 0.9)"; //Glass/Android/Still
+$sty_overlayLight : "rgba(0, 5, 5, 0.85)"; //Overlay/Light
+$sty_overlayStill : "rgba(0, 5, 5, 0.6)"; //Overlay/Still
+$sty_overlayThick : "rgba(0, 5, 5, 0.85)"; //Overlay/Thick
+// PlayseeGray
+$sty_playseeGrayLightGray1 : "#314146"; //PlayseeGray/Light/Gray1
+$sty_playseeGrayLightGray2 : "#516166"; //PlayseeGray/Light/Gray2
+$sty_playseeGrayLightGray3 : "#93A7AE"; //PlayseeGray/Light/Gray3
+$sty_playseeGrayLightGray4 : "#CAE0E8"; //PlayseeGray/Light/Gray4
+$sty_playseeGrayLightGray5 : "#FAFDFF"; //PlayseeGray/Light/Gray5
+$sty_playseeGrayStillGray1 : "#FAFDFF"; //PlayseeGray/Still/Gray1
+$sty_playseeGrayStillGray2 : "#CAE0E8"; //PlayseeGray/Still/Gray2
+$sty_playseeGrayStillGray3 : "#93A7AE"; //PlayseeGray/Still/Gray3
+$sty_playseeGrayStillGray4 : "#516166"; //PlayseeGray/Still/Gray4
+$sty_playseeGrayStillGray5 : "#314146"; //PlayseeGray/Still/Gray5
+// LabelColor
+$sty_labelLightL1 : "#314146"; //Label/Light/L1
+$sty_labelLightL2 : "rgba(40, 70, 80, 0.6)"; //Label/Light/L2
+$sty_labelLightL3 : "rgba(40, 70, 80, 0.3)"; //Label/Light/L3
+$sty_labelStillL1 : "#FAFDFF"; //Label/Still/L1
+$sty_labelStillL2 : "rgba(232, 249, 252, 0.6)"; //Label/Still/L2
+$sty_labelStillL3 : "rgba(232, 249, 252, 0.3)"; //Label/Still/L3
+$sty_labelLightFirefox : "rgba(40, 70, 80, 0.85)"; //custom for firefox
+// PrimaryColor
+$sty_primaryLightP1 : "#FF765C"; //Primary/Light/P1
+$sty_primaryLightP2 : "rgba(255, 120, 10, 0.08)"; //Primary/Light/P2
+$sty_primaryLightOnPrimary : "#FAFDFF"; //Primary/Light/On_Primary
+$sty_primaryStillP1 : "#ED765E"; //Primary/Still/P1
+$sty_primaryStillP2 : "rgba(255, 204, 163, 0.16)"; //Primary/Still/P2
+$sty_primaryStillOnPrimary : "#FAFDFF"; //Primary/Still/On_Primary
+// SecondaryColor
+$sty_secondaryLightP1 : "#32A0A6"; //Secondary/Light/P1
+$sty_secondaryLightP2 : "rgba(0, 115, 121, 0.08)"; //Secondary/Light/P2
+$sty_secondaryLightP3 : "#FAFDFF"; //Secondary/Light/P3
+$sty_secondaryStillP1 : "#18AEB8"; //Secondary/Still/P1
+$sty_secondaryStillP2 : "rgba(115, 230, 230, 0.16)"; //Secondary/Still/P2
+$sty_secondaryStillP3 : "#FAFDFF"; //Secondary/Still/P3
+// AlertColor
+$sty_alertLight : "#E32020"; //Alert/Light
+$sty_alertStill : "#F74A55"; //Alert/Still
