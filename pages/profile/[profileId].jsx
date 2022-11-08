@@ -1,3 +1,5 @@
+import { useState, useEffect, useRef } from 'react';
+
 // api
 import { ProfileApi } from 'asset/api'
 
@@ -29,7 +31,64 @@ import FollowShare from 'component/block/followShare'
 const Profile = props => {
   // you can get all data from these props
   const { profileInfo, profileList } = props
-  console.log('Profile', profileList.post_list)
+  console.log('Profile', profileInfo, profileList)
+
+  useEffect(() => {
+
+    createObserver();
+
+  }, []);
+
+  // State
+  const [pageData, setPageData] = useState(profileList.post_list);
+
+  // Ref
+  const ref = useRef(null);
+  const token = useRef(profileList.page_token);
+  const Block = useRef(false);
+
+  //
+  const fetchData = async () => {
+
+    Block.current = true;
+    const { data } = await ProfileApi.post(PROFILE_LIST_HOST_API, {
+      user_id: decodeURIComponent(profileInfo.user.user_id),
+      page_token: token.current,
+    }, {
+      headers: {
+        Authorization: PROFILE_HOST_ENDPOINT,
+      },
+    });
+
+    token.current = data.page_token
+    Block.current = false;
+    setPageData((preState) => {
+      return [...preState, ...data.post_list]
+    });
+
+  };
+
+  //
+  const createObserver = () => {
+    let observer;
+
+    let options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1.0,
+    };
+
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (Block.current) return;
+          fetchData();
+        }
+      });
+    }, options);
+
+    observer.observe(ref.current);
+  }
 
   return (
     <ProfileContainer>
@@ -68,9 +127,9 @@ const Profile = props => {
       <div className="list-wrap">
         <div className="lists">
           {
-            profileList.post_list.map(({ post_id, display_resources, geo }) => (
+            pageData?.map(({ display_resources, geo }, idx) => (
               <div
-                key={post_id}
+                key={idx}
                 className="item"
               >
                 <div className="thumb">
@@ -82,6 +141,13 @@ const Profile = props => {
           }
         </div>
       </div>
+
+      <button
+        onClick={fetchData}
+        ref={ref}
+      >
+        click
+      </button>
     </ProfileContainer>
   )
 }
